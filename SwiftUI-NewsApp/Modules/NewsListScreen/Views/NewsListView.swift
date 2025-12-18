@@ -10,36 +10,42 @@ import SwiftUI
 // MARK: - NewsListView
 struct NewsListView: View {
     
+    // MARK: - Properties
     @StateObject var vm: NewsViewModel
+    @ObservedObject var favVM: FavoritesViewModel
     
-    init(vm: NewsViewModel = NewsViewModel()) {
+    // MARK: - Initializer
+    init(vm: NewsViewModel = NewsViewModel(), favVM: FavoritesViewModel) {
         _vm = StateObject(wrappedValue: vm)
+        self.favVM = favVM
     }
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ScrollView {
+                
                 VStack(spacing: 18) {
                     
-                    // Header
+                    // MARK: - Header
                     NewsHeaderView()
                         .padding(.bottom, 8)
                     
-                    // Offline Banner
+                    // MARK: - Offline Banner
                     if vm.isOffline {
                         OfflineBannerView()
                     }
                     
-                    // Loading Indicator
+                    // MARK: - Loading Indicator
                     if vm.isLoading {
                         ProgressView()
                             .scaleEffect(1.5)
                             .padding()
                     }
                     
-                    // Articles List
+                    // MARK: - Articles List
                     ForEach(vm.articles) { article in
-                        NavigationLink(destination: ArticleDetailView(article: article)) {
+                        NavigationLink(destination: ArticleDetailView(article: article, vm: favVM)) {
                             ArticleCardView(article: article)
                         }
                         .buttonStyle(.plain)
@@ -48,16 +54,17 @@ struct NewsListView: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
+                
             }
             .background(Color(.systemGroupedBackground))
             .navigationBarHidden(true)
             .onAppear {
                 vm.fetchTopHeadlines()
+                favVM.fetchFavorites()
             }
         }
     }
 }
-
 
 // MARK: - Previews
 struct NewsListView_Previews: PreviewProvider {
@@ -78,6 +85,9 @@ struct NewsListView_Previews: PreviewProvider {
         let vm = NewsViewModel()
         vm.articles = mockArticles
         
-        return NewsListView(vm: vm)
+        let previewContext = PersistenceController(inMemory: true).container.viewContext
+        let favVM = FavoritesViewModel(context: previewContext)
+        
+        return NewsListView(vm: vm, favVM: favVM)
     }
 }

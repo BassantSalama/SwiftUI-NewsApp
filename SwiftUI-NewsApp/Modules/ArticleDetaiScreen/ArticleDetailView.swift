@@ -7,24 +7,27 @@
 
 import SwiftUI
 
+// MARK: - ArticleDetailView
 struct ArticleDetailView: View {
     
+    // MARK: - Properties
     let article: Article
-    
-    @State private var isFavorite: Bool = false
-    
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var vm: FavoritesViewModel // Passed from parent or created here
     
+    // MARK: - Body
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 
-                // MARK: - Header Image + Star
+                // MARK: - Article Image + Favorite Button
                 GeometryReader { geometry in
                     let padding: CGFloat = 20
                     let contentWidth = geometry.size.width - padding * 2
                     
                     ZStack(alignment: .topTrailing) {
+                        
+                        // Article Image
                         if let urlString = article.urlToImage,
                            let url = URL(string: urlString) {
                             AsyncImage(url: url) { image in
@@ -41,12 +44,13 @@ struct ArticleDetailView: View {
                             }
                         }
                         
+                        // Favorite Star Button
                         Button {
                             withAnimation(.spring()) {
-                                isFavorite.toggle()
+                                vm.toggleFavorite(article: article)
                             }
                         } label: {
-                            Image(systemName: isFavorite ? "star.fill" : "star")
+                            Image(systemName: vm.isFavorite(article: article) ? "star.fill" : "star")
                                 .foregroundColor(.white)
                                 .padding(12)
                                 .background(.ultraThinMaterial)
@@ -59,7 +63,7 @@ struct ArticleDetailView: View {
                 }
                 .frame(height: 350)
                 
-                // MARK: - Article Content
+                // MARK: - Article Content Card
                 VStack(alignment: .leading, spacing: 16) {
                     Text(article.title)
                         .font(.title2)
@@ -91,6 +95,8 @@ struct ArticleDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
+            
+            // MARK: - Toolbar Title
             ToolbarItem(placement: .principal) {
                 Text("Details")
                     .font(.title2)
@@ -98,6 +104,7 @@ struct ArticleDetailView: View {
                     .padding(.bottom, 6)
             }
             
+            // MARK: - Back Button
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
                     presentationMode.wrappedValue.dismiss()
@@ -114,7 +121,7 @@ struct ArticleDetailView: View {
     }
 }
 
-// MARK: - Preview
+// MARK: - Previews
 struct ArticleDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let sampleArticle = Article(
@@ -122,9 +129,11 @@ struct ArticleDetailView_Previews: PreviewProvider {
             url: "https://example.com/news1",
             urlToImage: "https://via.placeholder.com/300",
             publishedAt: "2025-12-16",
-            content: "This is some sample content for the article detail preview. This is some sample content for the article detail preview."
+            content: "This is some sample content for the article detail preview. This is some sample content for the article detail preview. This is some sample content for the article detail preview."
         )
+        let vm = FavoritesViewModel() // ViewModel instance for Favorites
         
-        ArticleDetailView(article: sampleArticle)
+        ArticleDetailView(article: sampleArticle, vm: vm)
     }
 }
+
