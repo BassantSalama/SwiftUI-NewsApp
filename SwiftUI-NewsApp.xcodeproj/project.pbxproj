@@ -26,6 +26,7 @@
 		04F5D5A22EF3C2D500CC74F5 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */; };
 		04F5D5A42EF3C30200CC74F5 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */; };
 		04F5D5A62EF3C56600CC74F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A52EF3C56600CC74F5 /* ContentView.swift */; };
+		04F5D5A82EF3C7BA00CC74F5 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A72EF3C7BA00CC74F5 /* ArticleDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 		04F5D5A52EF3C56600CC74F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04F5D5A72EF3C7BA00CC74F5 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				04F5D5942EF3B84F00CC74F5 /* Views */,
+				04F5D5A72EF3C7BA00CC74F5 /* ArticleDetailView.swift */,
 			);
 			path = ArticleDetaiScreen;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				04F5D5802EF3B34F00CC74F5 /* NetworkManager.swift in Sources */,
 				04F5D5A02EF3C27C00CC74F5 /* NewsListView.swift in Sources */,
 				04F5D57C2EF3B32100CC74F5 /* APIRequest.swift in Sources */,
+				04F5D5A82EF3C7BA00CC74F5 /* ArticleDetailView.swift in Sources */,
 				04F5D5982EF3C02000CC74F5 /* Article.swift in Sources */,
 				04F5D5A62EF3C56600CC74F5 /* ContentView.swift in Sources */,
 				04F5D5822EF3B36500CC74F5 /* ResponseHandler.swift in Sources */,
