@@ -1,0 +1,40 @@
+
+# =========================
+# Xcode
+# =========================
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# =========================
+# Swift Package Manager
+# =========================
+.build/
+Packages/
+.swiftpm/
+
+# =========================
+# Dependency Managers
+# =========================
+Pods/
+Carthage/Build/
+
+# =========================
+# Fastlane
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+*.swp
+*.lock
+
+
