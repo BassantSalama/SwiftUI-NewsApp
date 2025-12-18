@@ -18,6 +18,14 @@
 		04F5D5822EF3B36500CC74F5 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5812EF3B36500CC74F5 /* ResponseHandler.swift */; };
 		04F5D5842EF3B38200CC74F5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5832EF3B38200CC74F5 /* NetworkMonitor.swift */; };
 		04F5D5862EF3B4B300CC74F5 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5852EF3B4B300CC74F5 /* NewsAPI.swift */; };
+		04F5D5982EF3C02000CC74F5 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5972EF3C02000CC74F5 /* Article.swift */; };
+		04F5D59A2EF3C0EF00CC74F5 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5992EF3C0EF00CC74F5 /* NewsViewModel.swift */; };
+		04F5D59C2EF3C1B200CC74F5 /* OfflineBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D59B2EF3C1B200CC74F5 /* OfflineBannerView.swift */; };
+		04F5D59E2EF3C20100CC74F5 /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D59D2EF3C20100CC74F5 /* ArticleCardView.swift */; };
+		04F5D5A02EF3C27C00CC74F5 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D59F2EF3C27C00CC74F5 /* NewsListView.swift */; };
+		04F5D5A22EF3C2D500CC74F5 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */; };
+		04F5D5A42EF3C30200CC74F5 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */; };
+		04F5D5A62EF3C56600CC74F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A52EF3C56600CC74F5 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +41,14 @@
 		04F5D5812EF3B36500CC74F5 /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		04F5D5832EF3B38200CC74F5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		04F5D5852EF3B4B300CC74F5 /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		04F5D5972EF3C02000CC74F5 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		04F5D5992EF3C0EF00CC74F5 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		04F5D59B2EF3C1B200CC74F5 /* OfflineBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineBannerView.swift; sourceTree = "<group>"; };
+		04F5D59D2EF3C20100CC74F5 /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
+		04F5D59F2EF3C27C00CC74F5 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
+		04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
+		04F5D5A52EF3C56600CC74F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +81,9 @@
 		04F5D5622EF3AFCB00CC74F5 /* SwiftUI-NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				04F5D58E2EF3B7D400CC74F5 /* Modules */,
 				04F5D5632EF3AFCB00CC74F5 /* SwiftUI_NewsAppApp.swift */,
+				04F5D5A52EF3C56600CC74F5 /* ContentView.swift */,
+				04F5D58E2EF3B7D400CC74F5 /* Modules */,
 				04F5D5742EF3B1F100CC74F5 /* Resources */,
 				04F5D5722EF3B1D400CC74F5 /* Network */,
 				04F5D5732EF3B1E500CC74F5 /* Persistence */,
@@ -87,6 +104,7 @@
 		04F5D5712EF3B1BB00CC74F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D5972EF3C02000CC74F5 /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +178,11 @@
 		04F5D5922EF3B84100CC74F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D59B2EF3C1B200CC74F5 /* OfflineBannerView.swift */,
+				04F5D59D2EF3C20100CC74F5 /* ArticleCardView.swift */,
+				04F5D59F2EF3C27C00CC74F5 /* NewsListView.swift */,
+				04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */,
+				04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +204,7 @@
 		04F5D5952EF3B86400CC74F5 /*  ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D5992EF3C0EF00CC74F5 /* NewsViewModel.swift */,
 			);
 			path = " ViewModel";
 			sourceTree = "<group>";
@@ -262,14 +286,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F5D5A42EF3C30200CC74F5 /* NewsHeaderView.swift in Sources */,
 				04F5D5782EF3B2F400CC74F5 /* APIEndpointConfig.swift in Sources */,
 				04F5D57A2EF3B30B00CC74F5 /* APIError.swift in Sources */,
 				04F5D5802EF3B34F00CC74F5 /* NetworkManager.swift in Sources */,
+				04F5D5A02EF3C27C00CC74F5 /* NewsListView.swift in Sources */,
 				04F5D57C2EF3B32100CC74F5 /* APIRequest.swift in Sources */,
+				04F5D5982EF3C02000CC74F5 /* Article.swift in Sources */,
+				04F5D5A62EF3C56600CC74F5 /* ContentView.swift in Sources */,
 				04F5D5822EF3B36500CC74F5 /* ResponseHandler.swift in Sources */,
+				04F5D59A2EF3C0EF00CC74F5 /* NewsViewModel.swift in Sources */,
 				04F5D57E2EF3B33700CC74F5 /* APIRequestBuilder.swift in Sources */,
 				04F5D5862EF3B4B300CC74F5 /* NewsAPI.swift in Sources */,
 				04F5D5842EF3B38200CC74F5 /* NetworkMonitor.swift in Sources */,
+				04F5D59E2EF3C20100CC74F5 /* ArticleCardView.swift in Sources */,
+				04F5D5A22EF3C2D500CC74F5 /* RoundedCorner.swift in Sources */,
+				04F5D59C2EF3C1B200CC74F5 /* OfflineBannerView.swift in Sources */,
 				04F5D5642EF3AFCB00CC74F5 /* SwiftUI_NewsAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
