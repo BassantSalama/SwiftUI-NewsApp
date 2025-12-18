@@ -18,6 +18,7 @@
 		04F5D5822EF3B36500CC74F5 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5812EF3B36500CC74F5 /* ResponseHandler.swift */; };
 		04F5D5842EF3B38200CC74F5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5832EF3B38200CC74F5 /* NetworkMonitor.swift */; };
 		04F5D5862EF3B4B300CC74F5 /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5852EF3B4B300CC74F5 /* NewsAPI.swift */; };
+		04F5D5982EF3C02000CC74F5 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5972EF3C02000CC74F5 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		04F5D5812EF3B36500CC74F5 /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		04F5D5832EF3B38200CC74F5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		04F5D5852EF3B4B300CC74F5 /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		04F5D5972EF3C02000CC74F5 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		04F5D5712EF3B1BB00CC74F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D5972EF3C02000CC74F5 /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				04F5D57A2EF3B30B00CC74F5 /* APIError.swift in Sources */,
 				04F5D5802EF3B34F00CC74F5 /* NetworkManager.swift in Sources */,
 				04F5D57C2EF3B32100CC74F5 /* APIRequest.swift in Sources */,
+				04F5D5982EF3C02000CC74F5 /* Article.swift in Sources */,
 				04F5D5822EF3B36500CC74F5 /* ResponseHandler.swift in Sources */,
 				04F5D57E2EF3B33700CC74F5 /* APIRequestBuilder.swift in Sources */,
 				04F5D5862EF3B4B300CC74F5 /* NewsAPI.swift in Sources */,
