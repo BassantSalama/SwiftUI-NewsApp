@@ -12,37 +12,57 @@ struct FavoritesView: View {
     
     // MARK: - Properties
     @ObservedObject var vm: FavoritesViewModel
-
+    
     // MARK: - Body
     var body: some View {
         NavigationView {
-            List {
+            
+            if vm.favorites.isEmpty {
+                // MARK: - Empty / Offline Placeholder
+                VStack(spacing: 12) {
+                    Image(systemName: "star")
+                        .font(.system(size: 50))
+                        .foregroundColor(.blue)
+                    Text("No Favorites Yet")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                    Text("Save articles you love to see them here. Enjoy browsing even offline!")
+                        .font(.caption)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal, 24)
+                }
+                .padding(.top, 50)
                 
+            } else {
                 // MARK: - Favorite Articles List
-                ForEach(vm.favorites, id: \.id) { fav in
-                    NavigationLink(destination: ArticleDetailView(article: convertToArticle(fav), vm: vm)) {
-                        ArticleCardView(article: convertToArticle(fav))
+                List {
+                    ForEach(vm.favorites, id: \.id) { fav in
+                        NavigationLink(destination: ArticleDetailView(article: convertToArticle(fav), vm: vm)) {
+                            ArticleCardView(article: convertToArticle(fav))
+                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
-                }
-                .onDelete { indexSet in
-                    // MARK: - Delete Favorite
-                    indexSet.forEach { index in
-                        let fav = vm.favorites[index]
-                        let article = convertToArticle(fav)
-                        vm.toggleFavorite(article: article)  
+                    .onDelete { indexSet in
+                        // MARK: - Delete Favorite
+                        indexSet.forEach { index in
+                            let fav = vm.favorites[index]
+                            let article = convertToArticle(fav)
+                            vm.toggleFavorite(article: article)
+                        }
                     }
                 }
-
+                .listStyle(PlainListStyle())
+                .navigationTitle("Favorites")
+                
             }
-            .listStyle(PlainListStyle())
-            .onAppear {
-                vm.fetchFavorites()
-            }
-            .navigationTitle("Favorites")
         }
+        .onAppear {
+            vm.fetchFavorites()
+        }
+        
     }
-
+    
     // MARK: - Helper: Convert CoreData FavoriteArticle to Article
     private func convertToArticle(_ fav: FavoriteArticle) -> Article {
         Article(
@@ -58,12 +78,9 @@ struct FavoritesView: View {
 // MARK: - Previews
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        // Create in-memory persistence
         let previewContext = PersistenceController(inMemory: true).container.viewContext
-        
-        // Pass it to the ViewModel
         let favVM = FavoritesViewModel(context: previewContext)
-        
         FavoritesView(vm: favVM)
     }
 }
+
