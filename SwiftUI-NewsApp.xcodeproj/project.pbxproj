@@ -91,9 +91,8 @@
 		04F5D5622EF3AFCB00CC74F5 /* SwiftUI-NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D5B32EF3D5A200CC74F5 /* View */,
 				04F5D5B22EF3CE7F00CC74F5 /* UI Components */,
-				04F5D5632EF3AFCB00CC74F5 /* SwiftUI_NewsAppApp.swift */,
-				04F5D5A52EF3C56600CC74F5 /* ContentView.swift */,
 				04F5D58E2EF3B7D400CC74F5 /* Modules */,
 				04F5D5742EF3B1F100CC74F5 /* Resources */,
 				04F5D5722EF3B1D400CC74F5 /* Network */,
@@ -237,6 +236,15 @@
 				04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */,
 			);
 			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		04F5D5B32EF3D5A200CC74F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F5D5A52EF3C56600CC74F5 /* ContentView.swift */,
+				04F5D5632EF3AFCB00CC74F5 /* SwiftUI_NewsAppApp.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
