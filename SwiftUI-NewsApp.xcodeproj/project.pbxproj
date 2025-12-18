@@ -30,6 +30,7 @@
 		04F5D5AB2EF3C9B000CC74F5 /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5A92EF3C9B000CC74F5 /* NewsApp.xcdatamodeld */; };
 		04F5D5AD2EF3CA2F00CC74F5 /*  PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5AC2EF3CA2F00CC74F5 /*  PersistenceController.swift */; };
 		04F5D5AF2EF3CA7800CC74F5 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5AE2EF3CA7800CC74F5 /* FavoritesViewModel.swift */; };
+		04F5D5B12EF3CAF500CC74F5 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D5B02EF3CAF500CC74F5 /* FavoritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		04F5D5AA2EF3C9B000CC74F5 /* NewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsApp.xcdatamodel; sourceTree = "<group>"; };
 		04F5D5AC2EF3CA2F00CC74F5 /*  PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PersistenceController.swift"; sourceTree = "<group>"; };
 		04F5D5AE2EF3CA7800CC74F5 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		04F5D5B02EF3CAF500CC74F5 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		04F5D5932EF3B84A00CC74F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04F5D5B02EF3CAF500CC74F5 /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F5D5B12EF3CAF500CC74F5 /* FavoritesView.swift in Sources */,
 				04F5D5A42EF3C30200CC74F5 /* NewsHeaderView.swift in Sources */,
 				04F5D5782EF3B2F400CC74F5 /* APIEndpointConfig.swift in Sources */,
 				04F5D57A2EF3B30B00CC74F5 /* APIError.swift in Sources */,
