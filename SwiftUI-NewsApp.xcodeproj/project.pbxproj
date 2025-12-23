@@ -91,7 +91,7 @@
 		04F5D5622EF3AFCB00CC74F5 /* SwiftUI-NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				04F5D5B32EF3D5A200CC74F5 /* View */,
+				04F5D5B32EF3D5A200CC74F5 /* App */,
 				04F5D5B22EF3CE7F00CC74F5 /* UI Components */,
 				04F5D58E2EF3B7D400CC74F5 /* Modules */,
 				04F5D5742EF3B1F100CC74F5 /* Resources */,
@@ -190,7 +190,7 @@
 		04F5D5922EF3B84100CC74F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04F5D59B2EF3C1B200CC74F5 /* OfflineBannerView.swift */,
+				04F5D59F2EF3C27C00CC74F5 /* NewsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 		04F5D5B22EF3CE7F00CC74F5 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				04F5D59F2EF3C27C00CC74F5 /* NewsListView.swift */,
+				04F5D59B2EF3C1B200CC74F5 /* OfflineBannerView.swift */,
 				04F5D5A32EF3C30200CC74F5 /* NewsHeaderView.swift */,
 				04F5D59D2EF3C20100CC74F5 /* ArticleCardView.swift */,
 				04F5D5A12EF3C2D500CC74F5 /* RoundedCorner.swift */,
@@ -238,13 +238,13 @@
 			path = "UI Components";
 			sourceTree = "<group>";
 		};
-		04F5D5B32EF3D5A200CC74F5 /* View */ = {
+		04F5D5B32EF3D5A200CC74F5 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				04F5D5A52EF3C56600CC74F5 /* ContentView.swift */,
 				04F5D5632EF3AFCB00CC74F5 /* SwiftUI_NewsAppApp.swift */,
 			);
-			path = View;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

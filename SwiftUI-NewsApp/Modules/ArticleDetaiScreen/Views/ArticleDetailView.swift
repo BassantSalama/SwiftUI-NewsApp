@@ -131,7 +131,7 @@ struct ArticleDetailView_Previews: PreviewProvider {
             publishedAt: "2025-12-16",
             content: "This is some sample content for the article detail preview. This is some sample content for the article detail preview. This is some sample content for the article detail preview."
         )
-        let vm = FavoritesViewModel() // ViewModel instance for Favorites
+        let vm = FavoritesViewModel() 
         
         ArticleDetailView(article: sampleArticle, vm: vm)
     }
