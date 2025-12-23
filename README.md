@@ -1,53 +1,49 @@
-SwiftUI News App
+🌟 SwiftUI News App
 
-A modern News App built with SwiftUI that fetches articles from NewsAPI.org, allows users to view details, save favorites offline, and handle connectivity gracefully.
+A modern News App built with SwiftUI. Fetches articles from NewsAPI.org, lets users read full content, save favorites offline, and gracefully handles connectivity.
 
-Features
+📰 What It Does
 
-News List View
+Browse the Latest News
+Scroll through a dynamic list of articles with thumbnail, title, and published date.
 
-Displays a scrollable list of news articles.
+Read in Detail
+Tap an article to see:
 
-Each article shows:
+Large header image
 
-Thumbnail image
+Full content
 
-Title
+Clean, readable layout
 
-Published date
+Favorites
 
-Article Detail Page
+Mark articles as favorite with a star ✨
 
-Tap an article to view full content.
+Favorites are stored offline using Core Data
 
-Displays a large header image.
+Access all saved articles in a dedicated tab
 
-Shows detailed content.
+Offline Ready
 
-Favorite Functionality
+Detects network status
 
-Toggle a "Favorite" button (star icon) to mark/unmark articles.
+Shows appropriate fallback messages when offline
 
-Favorite articles are stored offline using Core Data.
+⚡ Modern State Management
 
-Saved Articles Screen
+Built entirely in SwiftUI using:
 
-Lists all favorite articles.
+@StateObject for view models
 
-Accessible via a separate tab.
+@Published for reactive updates
 
-Offline Handling
+ObservableObject for shared state
 
-Detects network status.
+🎨 Design
 
-Displays fallback UI/messages when offline.
+Minimalist, modern interface
 
-State Management
+Responsive layouts for all iOS devices
 
-Built with SwiftUI using @StateObject, @Published, and ObservableObject.
-
-Good Design
-
-Clean, modern SwiftUI interface.
-
-Responsive layouts on all iOS devices.
+Smooth navigation and transitions
